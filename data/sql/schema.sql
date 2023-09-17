@@ -1,0 +1,10 @@
+CREATE TABLE cita_medica (id BIGINT AUTO_INCREMENT, paciente_id BIGINT, doctor_id BIGINT, fecha DATE, INDEX paciente_id_idx (paciente_id), INDEX doctor_id_idx (doctor_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE doctor (id BIGINT AUTO_INCREMENT, tarjeta VARCHAR(255), especialidad VARCHAR(255), user_id BIGINT, INDEX unique_name_idx (tarjeta), INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE paciente (id BIGINT AUTO_INCREMENT, numhistoria VARCHAR(255), user_id BIGINT, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE patient (id BIGINT AUTO_INCREMENT, numhistoria VARCHAR(255), user_id BIGINT, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE user (id BIGINT AUTO_INCREMENT, username VARCHAR(255), password VARCHAR(255), nombre VARCHAR(255), apellido VARCHAR(255), cedula VARCHAR(255), role VARCHAR(255), INDEX unique_name_idx (cedula), PRIMARY KEY(id)) ENGINE = INNODB;
+ALTER TABLE cita_medica ADD CONSTRAINT cita_medica_paciente_id_paciente_id FOREIGN KEY (paciente_id) REFERENCES paciente(id) ON DELETE CASCADE;
+ALTER TABLE cita_medica ADD CONSTRAINT cita_medica_doctor_id_doctor_id FOREIGN KEY (doctor_id) REFERENCES doctor(id) ON DELETE CASCADE;
+ALTER TABLE doctor ADD CONSTRAINT doctor_user_id_user_id FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE;
+ALTER TABLE paciente ADD CONSTRAINT paciente_user_id_user_id FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE;
+ALTER TABLE patient ADD CONSTRAINT patient_user_id_user_id FOREIGN KEY (user_id) REFERENCES user(id);

@@ -1,0 +1,712 @@
+Sep 17 14:51:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /appointment/store with parameters array (  'module' => 'appointment',  'action' => 'store',)
+Sep 17 14:51:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 14:51:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 14:51:23 symfony [info] {appointmentActions} Call "appointmentActions->executeStore()"
+Sep 17 14:51:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 14:51:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM user u WHERE u.id = ? - (2)
+Sep 17 14:51:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM user u WHERE u.id = ? - (1)
+Sep 17 14:51:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM paciente p LEFT JOIN user u ON p.user_id = u.id WHERE (p.user_id = ?) - (2)
+Sep 17 14:51:23 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO cita_medica (paciente_id, doctor_id, fecha) VALUES (?, ?, ?) - (2, 1, -04-13)
+Sep 17 14:51:23 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '-04-13' for column 'fecha' at row 1
+Sep 17 14:51:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Sep 17 14:51:24 symfony [warning] {sfWebDebugLogger}  Warning at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php:409))
+Sep 17 14:51:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 14:51:24 symfony [info] {sfWebDebugLogger} Configuration 9.85 ms (8)
+Sep 17 14:51:24 symfony [info] {sfWebDebugLogger} Factories 45.39 ms (1)
+Sep 17 14:51:24 symfony [info] {sfWebDebugLogger} Action "appointment/store" 198.79 ms (1)
+Sep 17 14:51:24 symfony [info] {sfWebDebugLogger} Database (Doctrine) 3.86 ms (4)
+Sep 17 14:51:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /appointment/store with parameters array (  'module' => 'appointment',  'action' => 'store',)
+Sep 17 14:51:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 14:51:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 14:51:40 symfony [info] {appointmentActions} Call "appointmentActions->executeStore()"
+Sep 17 14:51:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 14:51:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM user u WHERE u.id = ? - (2)
+Sep 17 14:51:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM user u WHERE u.id = ? - (1)
+Sep 17 14:51:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM paciente p LEFT JOIN user u ON p.user_id = u.id WHERE (p.user_id = ?) - (2)
+Sep 17 14:51:40 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO cita_medica (paciente_id, doctor_id, fecha) VALUES (?, ?, ?) - (2, 1, 2020-04-13)
+Sep 17 14:51:40 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`medicalagenda`.`cita_medica`, CONSTRAINT `cita_medica_paciente_id_paciente_id` FOREIGN KEY (`paciente_id`) REFERENCES `paciente` (`id`) ON DELETE CASCADE)
+Sep 17 14:51:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Sep 17 14:51:40 symfony [warning] {sfWebDebugLogger}  Warning at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php:409))
+Sep 17 14:51:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 14:51:40 symfony [info] {sfWebDebugLogger} Configuration 16.29 ms (8)
+Sep 17 14:51:40 symfony [info] {sfWebDebugLogger} Factories 70.35 ms (1)
+Sep 17 14:51:40 symfony [info] {sfWebDebugLogger} Action "appointment/store" 184.99 ms (1)
+Sep 17 14:51:40 symfony [info] {sfWebDebugLogger} Database (Doctrine) 3.02 ms (4)
+Sep 17 14:53:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /appointment/store with parameters array (  'module' => 'appointment',  'action' => 'store',)
+Sep 17 14:53:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 14:53:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 14:53:26 symfony [info] {appointmentActions} Call "appointmentActions->executeStore()"
+Sep 17 14:53:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 14:53:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM user u WHERE u.id = ? - (2)
+Sep 17 14:53:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM user u WHERE u.id = ? - (1)
+Sep 17 14:53:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM paciente p LEFT JOIN user u ON p.user_id = u.id WHERE (p.user_id = ?) - (2)
+Sep 17 14:53:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT d.id AS d__id FROM doctor d LEFT JOIN user u ON d.user_id = u.id WHERE (d.user_id = ?) - (1)
+Sep 17 14:53:26 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO cita_medica (paciente_id, doctor_id, fecha) VALUES (?, ?, ?) - (1, 1, 2020-04-13)
+Sep 17 14:53:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 14:53:26 symfony [info] {sfWebResponse} Send header "Content-Type: application/json"
+Sep 17 14:53:26 symfony [info] {sfWebDebugLogger} Configuration 11.21 ms (8)
+Sep 17 14:53:26 symfony [info] {sfWebDebugLogger} Factories 41.32 ms (1)
+Sep 17 14:53:26 symfony [info] {sfWebDebugLogger} Action "appointment/store" 92.18 ms (1)
+Sep 17 14:53:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 4.84 ms (6)
+Sep 17 14:53:26 symfony [info] {sfWebDebugLogger} View "None" for "appointment/store" 0.01 ms (1)
+Sep 17 14:53:26 symfony [info] {sfWebResponse} Send content (18 o)
+Sep 17 14:54:31 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 14:54:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 14:54:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 14:54:31 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 14:54:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 14:54:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 14:54:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 14:54:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id - ()
+Sep 17 14:54:31 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 14:54:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 14:54:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 14:54:31 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 14:54:31 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 14:54:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 14:54:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 14:54:31 symfony [info] {sfWebDebugLogger} Configuration 14.96 ms (9)
+Sep 17 14:54:31 symfony [info] {sfWebDebugLogger} Factories 51.61 ms (1)
+Sep 17 14:54:31 symfony [info] {sfWebDebugLogger} Action "appointment/index" 82.43 ms (1)
+Sep 17 14:54:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 7.54 ms (6)
+Sep 17 14:54:31 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 42.94 ms (1)
+Sep 17 14:54:31 symfony [info] {sfWebResponse} Send content (48409 o)
+Sep 17 14:54:45 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 14:54:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 14:54:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 14:54:45 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 14:54:45 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 14:54:45 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 14:54:45 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 14:54:45 symfony [err] {Doctrine_Table_Exception} Unknown relation alias Doctor
+Sep 17 14:54:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Sep 17 14:54:45 symfony [warning] {sfWebDebugLogger}  Warning at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php:409))
+Sep 17 14:54:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 14:54:45 symfony [info] {sfWebDebugLogger} Configuration 10.94 ms (8)
+Sep 17 14:54:45 symfony [info] {sfWebDebugLogger} Factories 68.28 ms (1)
+Sep 17 14:54:45 symfony [info] {sfWebDebugLogger} Action "appointment/index" 209.76 ms (1)
+Sep 17 14:54:45 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.64 ms (3)
+Sep 17 14:57:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 14:57:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 14:57:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 14:57:32 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 14:57:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 14:57:32 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 14:57:32 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 14:57:32 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN doctor d ON c.doctor_id = d.id - ()
+Sep 17 14:57:32 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 14:57:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 14:57:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 14:57:32 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 14:57:32 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 14:57:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 14:57:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 14:57:32 symfony [info] {sfWebDebugLogger} Configuration 11.23 ms (9)
+Sep 17 14:57:32 symfony [info] {sfWebDebugLogger} Factories 42.34 ms (1)
+Sep 17 14:57:32 symfony [info] {sfWebDebugLogger} Action "appointment/index" 76.61 ms (1)
+Sep 17 14:57:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 4.14 ms (6)
+Sep 17 14:57:32 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 40.39 ms (1)
+Sep 17 14:57:32 symfony [info] {sfWebResponse} Send content (49081 o)
+Sep 17 15:00:19 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:00:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:00:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:00:19 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:00:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:00:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:00:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:00:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id - ()
+Sep 17 15:00:19 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:00:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:00:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:00:19 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:00:19 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:00:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:00:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:00:19 symfony [info] {sfWebDebugLogger} Configuration 14.36 ms (9)
+Sep 17 15:00:19 symfony [info] {sfWebDebugLogger} Factories 48.04 ms (1)
+Sep 17 15:00:19 symfony [info] {sfWebDebugLogger} Action "appointment/index" 91.54 ms (1)
+Sep 17 15:00:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 4.60 ms (6)
+Sep 17 15:00:19 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 37.33 ms (1)
+Sep 17 15:00:19 symfony [info] {sfWebResponse} Send content (50101 o)
+Sep 17 15:01:12 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:01:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:01:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:01:12 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:01:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:01:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:01:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:01:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id - ()
+Sep 17 15:01:12 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:01:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:01:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:01:12 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:01:12 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:01:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:01:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:01:12 symfony [info] {sfWebDebugLogger} Configuration 12.41 ms (9)
+Sep 17 15:01:12 symfony [info] {sfWebDebugLogger} Factories 47.19 ms (1)
+Sep 17 15:01:12 symfony [info] {sfWebDebugLogger} Action "appointment/index" 82.85 ms (1)
+Sep 17 15:01:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 6.05 ms (6)
+Sep 17 15:01:12 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 46.39 ms (1)
+Sep 17 15:01:12 symfony [info] {sfWebResponse} Send content (50115 o)
+Sep 17 15:02:09 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:02:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:02:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:02:09 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:02:09 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:02:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:02:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:02:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id, u2.id AS u2__id, u2.username AS u2__username, u2.password AS u2__password, u2.nombre AS u2__nombre, u2.apellido AS u2__apellido, u2.cedula AS u2__cedula, u2.role AS u2__role FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id LEFT JOIN user u2 ON d.user_id = u2.id - ()
+Sep 17 15:02:09 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:02:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:02:09 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:02:09 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:02:09 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:02:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:02:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:02:09 symfony [info] {sfWebDebugLogger} Configuration 13.88 ms (9)
+Sep 17 15:02:09 symfony [info] {sfWebDebugLogger} Factories 52.56 ms (1)
+Sep 17 15:02:09 symfony [info] {sfWebDebugLogger} Action "appointment/index" 92.93 ms (1)
+Sep 17 15:02:09 symfony [info] {sfWebDebugLogger} Database (Doctrine) 7.95 ms (6)
+Sep 17 15:02:09 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 48.30 ms (1)
+Sep 17 15:02:09 symfony [info] {sfWebResponse} Send content (51207 o)
+Sep 17 15:02:27 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:02:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:02:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:02:27 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:02:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:02:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:02:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:02:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id, u2.id AS u2__id, u2.username AS u2__username, u2.password AS u2__password, u2.nombre AS u2__nombre, u2.apellido AS u2__apellido, u2.cedula AS u2__cedula, u2.role AS u2__role FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id LEFT JOIN user u2 ON d.user_id = u2.id - ()
+Sep 17 15:02:27 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:02:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:02:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:02:27 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:02:27 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:02:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:02:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:02:27 symfony [info] {sfWebDebugLogger} Configuration 14.56 ms (9)
+Sep 17 15:02:27 symfony [info] {sfWebDebugLogger} Factories 47.14 ms (1)
+Sep 17 15:02:27 symfony [info] {sfWebDebugLogger} Action "appointment/index" 83.38 ms (1)
+Sep 17 15:02:27 symfony [info] {sfWebDebugLogger} Database (Doctrine) 6.99 ms (6)
+Sep 17 15:02:27 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 43.41 ms (1)
+Sep 17 15:02:27 symfony [info] {sfWebResponse} Send content (51255 o)
+Sep 17 15:05:31 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:05:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:05:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:05:31 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:05:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:05:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:05:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:05:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id, u2.id AS u2__id, u2.username AS u2__username, u2.password AS u2__password, u2.nombre AS u2__nombre, u2.apellido AS u2__apellido, u2.cedula AS u2__cedula, u2.role AS u2__role FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id LEFT JOIN user u2 ON d.user_id = u2.id - ()
+Sep 17 15:05:31 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:05:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:05:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:05:31 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:05:31 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:05:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:05:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:05:31 symfony [info] {sfWebDebugLogger} Configuration 17.61 ms (9)
+Sep 17 15:05:31 symfony [info] {sfWebDebugLogger} Factories 58.53 ms (1)
+Sep 17 15:05:31 symfony [info] {sfWebDebugLogger} Action "appointment/index" 67.85 ms (1)
+Sep 17 15:05:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 7.19 ms (6)
+Sep 17 15:05:31 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 44.04 ms (1)
+Sep 17 15:05:31 symfony [info] {sfWebResponse} Send content (51152 o)
+Sep 17 15:05:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /appointment/delete with parameters array (  'module' => 'appointment',  'action' => 'delete',)
+Sep 17 15:05:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:05:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:05:33 symfony [info] {appointmentActions} Call "appointmentActions->executeDelete()"
+Sep 17 15:05:33 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:05:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha FROM cita_medica c WHERE (c.id = ?) LIMIT 1 - (3)
+Sep 17 15:05:33 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM cita_medica WHERE id = ? - (3)
+Sep 17 15:05:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:05:33 symfony [info] {sfWebResponse} Send header "Content-Type: application/json"
+Sep 17 15:05:33 symfony [info] {sfWebDebugLogger} Configuration 10.51 ms (8)
+Sep 17 15:05:33 symfony [info] {sfWebDebugLogger} Factories 42.33 ms (1)
+Sep 17 15:05:33 symfony [info] {sfWebDebugLogger} Action "appointment/delete" 65.76 ms (1)
+Sep 17 15:05:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.86 ms (3)
+Sep 17 15:05:33 symfony [info] {sfWebDebugLogger} View "None" for "appointment/delete" 0.01 ms (1)
+Sep 17 15:05:33 symfony [info] {sfWebResponse} Send content (18 o)
+Sep 17 15:05:33 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:05:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:05:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:05:33 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:05:33 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:05:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:05:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:05:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id, u2.id AS u2__id, u2.username AS u2__username, u2.password AS u2__password, u2.nombre AS u2__nombre, u2.apellido AS u2__apellido, u2.cedula AS u2__cedula, u2.role AS u2__role FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id LEFT JOIN user u2 ON d.user_id = u2.id - ()
+Sep 17 15:05:33 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:05:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:05:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:05:33 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:05:33 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:05:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:05:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:05:33 symfony [info] {sfWebDebugLogger} Configuration 13.50 ms (9)
+Sep 17 15:05:33 symfony [info] {sfWebDebugLogger} Factories 54.89 ms (1)
+Sep 17 15:05:33 symfony [info] {sfWebDebugLogger} Action "appointment/index" 74.23 ms (1)
+Sep 17 15:05:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 5.87 ms (6)
+Sep 17 15:05:33 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 44.95 ms (1)
+Sep 17 15:05:33 symfony [info] {sfWebResponse} Send content (50710 o)
+Sep 17 15:05:37 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:05:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:05:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:05:37 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:05:37 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:05:37 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:05:37 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:05:37 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id, u2.id AS u2__id, u2.username AS u2__username, u2.password AS u2__password, u2.nombre AS u2__nombre, u2.apellido AS u2__apellido, u2.cedula AS u2__cedula, u2.role AS u2__role FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id LEFT JOIN user u2 ON d.user_id = u2.id - ()
+Sep 17 15:05:37 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:05:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:05:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:05:37 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:05:37 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:05:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:05:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:05:37 symfony [info] {sfWebDebugLogger} Configuration 10.92 ms (9)
+Sep 17 15:05:37 symfony [info] {sfWebDebugLogger} Factories 42.30 ms (1)
+Sep 17 15:05:37 symfony [info] {sfWebDebugLogger} Action "appointment/index" 78.99 ms (1)
+Sep 17 15:05:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 8.25 ms (6)
+Sep 17 15:05:37 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 46.20 ms (1)
+Sep 17 15:05:37 symfony [info] {sfWebResponse} Send content (50710 o)
+Sep 17 15:06:06 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:06:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:06:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:06:06 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:06:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:06:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:06:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:06:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id, u2.id AS u2__id, u2.username AS u2__username, u2.password AS u2__password, u2.nombre AS u2__nombre, u2.apellido AS u2__apellido, u2.cedula AS u2__cedula, u2.role AS u2__role FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id LEFT JOIN user u2 ON d.user_id = u2.id - ()
+Sep 17 15:06:06 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:06:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:06:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:06:06 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:06:06 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:06:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:06:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:06:06 symfony [info] {sfWebDebugLogger} Configuration 16.53 ms (9)
+Sep 17 15:06:06 symfony [info] {sfWebDebugLogger} Factories 51.33 ms (1)
+Sep 17 15:06:06 symfony [info] {sfWebDebugLogger} Action "appointment/index" 91.74 ms (1)
+Sep 17 15:06:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 6.77 ms (6)
+Sep 17 15:06:06 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 67.30 ms (1)
+Sep 17 15:06:06 symfony [info] {sfWebResponse} Send content (50764 o)
+Sep 17 15:06:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /appointment/store with parameters array (  'module' => 'appointment',  'action' => 'store',)
+Sep 17 15:06:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:06:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:06:14 symfony [info] {appointmentActions} Call "appointmentActions->executeStore()"
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM user u WHERE u.id = ? - (2)
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM user u WHERE u.id = ? - (1)
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM paciente p LEFT JOIN user u ON p.user_id = u.id WHERE (p.user_id = ?) - (2)
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT d.id AS d__id FROM doctor d LEFT JOIN user u ON d.user_id = u.id WHERE (d.user_id = ?) - (1)
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO cita_medica (paciente_id, doctor_id, fecha) VALUES (?, ?, ?) - (1, 1, 2020-04-11)
+Sep 17 15:06:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:06:14 symfony [info] {sfWebResponse} Send header "Content-Type: application/json"
+Sep 17 15:06:14 symfony [info] {sfWebDebugLogger} Configuration 11.99 ms (8)
+Sep 17 15:06:14 symfony [info] {sfWebDebugLogger} Factories 54.89 ms (1)
+Sep 17 15:06:14 symfony [info] {sfWebDebugLogger} Action "appointment/store" 101.73 ms (1)
+Sep 17 15:06:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 3.91 ms (6)
+Sep 17 15:06:14 symfony [info] {sfWebDebugLogger} View "None" for "appointment/store" 0.01 ms (1)
+Sep 17 15:06:14 symfony [info] {sfWebResponse} Send content (18 o)
+Sep 17 15:06:14 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:06:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:06:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:06:14 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id, u2.id AS u2__id, u2.username AS u2__username, u2.password AS u2__password, u2.nombre AS u2__nombre, u2.apellido AS u2__apellido, u2.cedula AS u2__cedula, u2.role AS u2__role FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id LEFT JOIN user u2 ON d.user_id = u2.id - ()
+Sep 17 15:06:14 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:06:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:06:14 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:06:14 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:06:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:06:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:06:14 symfony [info] {sfWebDebugLogger} Configuration 13.95 ms (9)
+Sep 17 15:06:14 symfony [info] {sfWebDebugLogger} Factories 55.94 ms (1)
+Sep 17 15:06:14 symfony [info] {sfWebDebugLogger} Action "appointment/index" 80.23 ms (1)
+Sep 17 15:06:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 7.40 ms (6)
+Sep 17 15:06:14 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 48.31 ms (1)
+Sep 17 15:06:15 symfony [info] {sfWebResponse} Send content (51206 o)
+Sep 17 15:06:18 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /appointment/delete with parameters array (  'module' => 'appointment',  'action' => 'delete',)
+Sep 17 15:06:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:06:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:06:18 symfony [info] {appointmentActions} Call "appointmentActions->executeDelete()"
+Sep 17 15:06:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:06:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha FROM cita_medica c WHERE (c.id = ?) LIMIT 1 - (4)
+Sep 17 15:06:18 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM cita_medica WHERE id = ? - (4)
+Sep 17 15:06:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:06:18 symfony [info] {sfWebResponse} Send header "Content-Type: application/json"
+Sep 17 15:06:18 symfony [info] {sfWebDebugLogger} Configuration 12.98 ms (8)
+Sep 17 15:06:18 symfony [info] {sfWebDebugLogger} Factories 55.41 ms (1)
+Sep 17 15:06:18 symfony [info] {sfWebDebugLogger} Action "appointment/delete" 68.70 ms (1)
+Sep 17 15:06:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 8.53 ms (3)
+Sep 17 15:06:18 symfony [info] {sfWebDebugLogger} View "None" for "appointment/delete" 0.01 ms (1)
+Sep 17 15:06:18 symfony [info] {sfWebResponse} Send content (18 o)
+Sep 17 15:06:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:06:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:06:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:06:18 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:06:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:06:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:06:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:06:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id, u2.id AS u2__id, u2.username AS u2__username, u2.password AS u2__password, u2.nombre AS u2__nombre, u2.apellido AS u2__apellido, u2.cedula AS u2__cedula, u2.role AS u2__role FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id LEFT JOIN user u2 ON d.user_id = u2.id - ()
+Sep 17 15:06:18 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:06:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:06:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:06:18 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:06:18 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:06:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:06:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:06:18 symfony [info] {sfWebDebugLogger} Configuration 14.07 ms (9)
+Sep 17 15:06:18 symfony [info] {sfWebDebugLogger} Factories 52.46 ms (1)
+Sep 17 15:06:18 symfony [info] {sfWebDebugLogger} Action "appointment/index" 81.62 ms (1)
+Sep 17 15:06:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 5.16 ms (6)
+Sep 17 15:06:18 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 39.97 ms (1)
+Sep 17 15:06:18 symfony [info] {sfWebResponse} Send content (50764 o)
+Sep 17 15:15:16 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /menu with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:15:16 symfony [info] {sfFrontWebController} Action "menu/index" does not exist
+Sep 17 15:15:16 symfony [err] {sfError404Exception} Action "menu/index" does not exist.
+Sep 17 15:15:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Sep 17 15:15:16 symfony [warning] {sfWebDebugLogger}  Warning at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php:409))
+Sep 17 15:15:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:15:16 symfony [info] {sfWebDebugLogger} Configuration 6.33 ms (5)
+Sep 17 15:15:16 symfony [info] {sfWebDebugLogger} Factories 74.65 ms (1)
+Sep 17 15:16:03 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:16:03 symfony [info] {sfFrontWebController} Action "menu/index" does not exist
+Sep 17 15:16:03 symfony [err] {sfError404Exception} Action "menu/index" does not exist.
+Sep 17 15:16:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Sep 17 15:16:03 symfony [warning] {sfWebDebugLogger}  Warning at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php:409))
+Sep 17 15:16:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:16:03 symfony [info] {sfWebDebugLogger} Configuration 8.56 ms (5)
+Sep 17 15:16:03 symfony [info] {sfWebDebugLogger} Factories 57.48 ms (1)
+Sep 17 15:16:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:16:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:16:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:16:22 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:16:22 symfony [err] {sfRenderException} The template "indexSuccess.php" does not exist or is unreadable in "".
+Sep 17 15:16:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Sep 17 15:16:22 symfony [warning] {sfWebDebugLogger}  Warning at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php:409))
+Sep 17 15:16:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:16:22 symfony [info] {sfWebDebugLogger} Configuration 63.15 ms (10)
+Sep 17 15:16:22 symfony [info] {sfWebDebugLogger} Factories 103.11 ms (1)
+Sep 17 15:16:22 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.10 ms (1)
+Sep 17 15:16:22 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 86.58 ms (1)
+Sep 17 15:16:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:16:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:16:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:16:37 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:16:37 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:16:37 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:16:37 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:16:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:16:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:16:37 symfony [info] {sfWebDebugLogger} Configuration 19.45 ms (9)
+Sep 17 15:16:37 symfony [info] {sfWebDebugLogger} Factories 105.35 ms (1)
+Sep 17 15:16:37 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.15 ms (1)
+Sep 17 15:16:37 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 55.14 ms (1)
+Sep 17 15:16:37 symfony [info] {sfWebResponse} Send content (32954 o)
+Sep 17 15:18:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:18:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:18:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:18:26 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:18:26 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:18:26 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:18:26 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:18:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:18:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:18:26 symfony [info] {sfWebDebugLogger} Configuration 16.94 ms (9)
+Sep 17 15:18:26 symfony [info] {sfWebDebugLogger} Factories 38.72 ms (1)
+Sep 17 15:18:26 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.13 ms (1)
+Sep 17 15:18:26 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 25.22 ms (1)
+Sep 17 15:18:26 symfony [info] {sfWebResponse} Send content (32959 o)
+Sep 17 15:19:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:19:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:19:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:19:11 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:19:11 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:19:11 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:11 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:19:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:19:11 symfony [info] {sfWebDebugLogger} Configuration 14.56 ms (9)
+Sep 17 15:19:11 symfony [info] {sfWebDebugLogger} Factories 46.00 ms (1)
+Sep 17 15:19:11 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.11 ms (1)
+Sep 17 15:19:11 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 27.65 ms (1)
+Sep 17 15:19:11 symfony [info] {sfWebResponse} Send content (32956 o)
+Sep 17 15:19:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:19:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:19:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:19:40 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:19:40 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:19:40 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:40 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:19:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:19:40 symfony [info] {sfWebDebugLogger} Configuration 13.96 ms (9)
+Sep 17 15:19:40 symfony [info] {sfWebDebugLogger} Factories 43.90 ms (1)
+Sep 17 15:19:40 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.15 ms (1)
+Sep 17 15:19:40 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 27.79 ms (1)
+Sep 17 15:19:40 symfony [info] {sfWebResponse} Send content (32932 o)
+Sep 17 15:19:42 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /doctor with parameters array (  'module' => 'doctor',  'action' => 'index',)
+Sep 17 15:19:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:19:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:19:42 symfony [info] {doctorActions} Call "doctorActions->executeIndex()"
+Sep 17 15:19:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:19:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM doctor d LEFT JOIN user u ON d.user_id = u.id - ()
+Sep 17 15:19:43 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/doctor/templates/indexSuccess.php"
+Sep 17 15:19:43 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:43 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:19:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:19:43 symfony [info] {sfWebDebugLogger} Configuration 13.43 ms (9)
+Sep 17 15:19:43 symfony [info] {sfWebDebugLogger} Factories 39.64 ms (1)
+Sep 17 15:19:43 symfony [info] {sfWebDebugLogger} Action "doctor/index" 102.46 ms (1)
+Sep 17 15:19:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.73 ms (2)
+Sep 17 15:19:43 symfony [info] {sfWebDebugLogger} View "Success" for "doctor/index" 37.70 ms (1)
+Sep 17 15:19:43 symfony [info] {sfWebResponse} Send content (42382 o)
+Sep 17 15:19:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:19:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:19:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:19:45 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:19:45 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:19:45 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:45 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:19:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:19:45 symfony [info] {sfWebDebugLogger} Configuration 11.79 ms (9)
+Sep 17 15:19:45 symfony [info] {sfWebDebugLogger} Factories 35.05 ms (1)
+Sep 17 15:19:45 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.10 ms (1)
+Sep 17 15:19:45 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 22.46 ms (1)
+Sep 17 15:19:45 symfony [info] {sfWebResponse} Send content (32933 o)
+Sep 17 15:19:47 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /appointment with parameters array (  'module' => 'appointment',  'action' => 'index',)
+Sep 17 15:19:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:19:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:19:47 symfony [info] {appointmentActions} Call "appointmentActions->executeIndex()"
+Sep 17 15:19:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:19:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id FROM paciente p - ()
+Sep 17 15:19:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id FROM doctor d - ()
+Sep 17 15:19:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.paciente_id AS c__paciente_id, c.doctor_id AS c__doctor_id, c.fecha AS c__fecha, p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role, d.id AS d__id, d.tarjeta AS d__tarjeta, d.especialidad AS d__especialidad, d.user_id AS d__user_id, u2.id AS u2__id, u2.username AS u2__username, u2.password AS u2__password, u2.nombre AS u2__nombre, u2.apellido AS u2__apellido, u2.cedula AS u2__cedula, u2.role AS u2__role FROM cita_medica c LEFT JOIN paciente p ON c.paciente_id = p.id LEFT JOIN user u ON p.user_id = u.id LEFT JOIN doctor d ON c.doctor_id = d.id LEFT JOIN user u2 ON d.user_id = u2.id - ()
+Sep 17 15:19:47 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/appointment/templates/indexSuccess.php"
+Sep 17 15:19:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (paciente)
+Sep 17 15:19:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM user u WHERE (u.role = ?) - (medico)
+Sep 17 15:19:47 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:47 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:19:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:19:47 symfony [info] {sfWebDebugLogger} Configuration 11.57 ms (9)
+Sep 17 15:19:47 symfony [info] {sfWebDebugLogger} Factories 39.03 ms (1)
+Sep 17 15:19:47 symfony [info] {sfWebDebugLogger} Action "appointment/index" 78.39 ms (1)
+Sep 17 15:19:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 7.89 ms (6)
+Sep 17 15:19:47 symfony [info] {sfWebDebugLogger} View "Success" for "appointment/index" 56.30 ms (1)
+Sep 17 15:19:47 symfony [info] {sfWebResponse} Send content (50763 o)
+Sep 17 15:19:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:19:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:19:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:19:50 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:19:50 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:19:50 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:50 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:19:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:19:50 symfony [info] {sfWebDebugLogger} Configuration 13.42 ms (9)
+Sep 17 15:19:50 symfony [info] {sfWebDebugLogger} Factories 45.02 ms (1)
+Sep 17 15:19:50 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.13 ms (1)
+Sep 17 15:19:50 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 26.89 ms (1)
+Sep 17 15:19:50 symfony [info] {sfWebResponse} Send content (32932 o)
+Sep 17 15:19:51 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /paciente with parameters array (  'module' => 'paciente',  'action' => 'index',)
+Sep 17 15:19:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:19:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:19:51 symfony [info] {pacienteActions} Call "pacienteActions->executeIndex()"
+Sep 17 15:19:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Sep 17 15:19:51 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.numhistoria AS p__numhistoria, p.user_id AS p__user_id, u.id AS u__id, u.username AS u__username, u.password AS u__password, u.nombre AS u__nombre, u.apellido AS u__apellido, u.cedula AS u__cedula, u.role AS u__role FROM paciente p LEFT JOIN user u ON p.user_id = u.id - ()
+Sep 17 15:19:51 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/paciente/templates/indexSuccess.php"
+Sep 17 15:19:51 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:51 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:19:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:19:51 symfony [info] {sfWebDebugLogger} Configuration 12.80 ms (9)
+Sep 17 15:19:51 symfony [info] {sfWebDebugLogger} Factories 39.83 ms (1)
+Sep 17 15:19:51 symfony [info] {sfWebDebugLogger} Action "paciente/index" 54.15 ms (1)
+Sep 17 15:19:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.26 ms (2)
+Sep 17 15:19:51 symfony [info] {sfWebDebugLogger} View "Success" for "paciente/index" 28.72 ms (1)
+Sep 17 15:19:51 symfony [info] {sfWebResponse} Send content (41748 o)
+Sep 17 15:19:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:19:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:19:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:19:54 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:19:54 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:19:54 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:54 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:19:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:19:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:19:54 symfony [info] {sfWebDebugLogger} Configuration 11.84 ms (9)
+Sep 17 15:19:54 symfony [info] {sfWebDebugLogger} Factories 40.07 ms (1)
+Sep 17 15:19:54 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.10 ms (1)
+Sep 17 15:19:54 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 23.55 ms (1)
+Sep 17 15:19:54 symfony [info] {sfWebResponse} Send content (32932 o)
+Sep 17 15:25:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:25:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:25:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:25:59 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:25:59 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:25:59 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:25:59 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:25:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:25:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:25:59 symfony [info] {sfWebDebugLogger} Configuration 13.61 ms (9)
+Sep 17 15:25:59 symfony [info] {sfWebDebugLogger} Factories 46.67 ms (1)
+Sep 17 15:25:59 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.10 ms (1)
+Sep 17 15:25:59 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 23.72 ms (1)
+Sep 17 15:25:59 symfony [info] {sfWebResponse} Send content (33244 o)
+Sep 17 15:25:59 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/css/menu.css with parameters array (  'module' => 'menu',  'action' => 'css',  'menu.css' => true,)
+Sep 17 15:26:00 symfony [info] {sfFrontWebController} Action "menu/css" does not exist
+Sep 17 15:26:00 symfony [err] {sfError404Exception} Action "menu/css" does not exist.
+Sep 17 15:26:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Sep 17 15:26:00 symfony [warning] {sfWebDebugLogger}  Warning at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php:409))
+Sep 17 15:26:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:26:00 symfony [info] {sfWebDebugLogger} Configuration 8.45 ms (5)
+Sep 17 15:26:00 symfony [info] {sfWebDebugLogger} Factories 101.59 ms (1)
+Sep 17 15:26:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:26:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:26:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:26:23 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:26:23 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:26:23 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:26:23 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:26:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:26:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:26:23 symfony [info] {sfWebDebugLogger} Configuration 14.55 ms (9)
+Sep 17 15:26:23 symfony [info] {sfWebDebugLogger} Factories 53.38 ms (1)
+Sep 17 15:26:23 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.13 ms (1)
+Sep 17 15:26:23 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 34.90 ms (1)
+Sep 17 15:26:23 symfony [info] {sfWebResponse} Send content (33242 o)
+Sep 17 15:26:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/css/menu.css with parameters array (  'module' => 'menu',  'action' => 'css',  'menu.css' => true,)
+Sep 17 15:26:23 symfony [info] {sfFrontWebController} Action "menu/css" does not exist
+Sep 17 15:26:23 symfony [err] {sfError404Exception} Action "menu/css" does not exist.
+Sep 17 15:26:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Sep 17 15:26:23 symfony [warning] {sfWebDebugLogger}  Warning at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php:409))
+Sep 17 15:26:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:26:23 symfony [info] {sfWebDebugLogger} Configuration 8.94 ms (5)
+Sep 17 15:26:23 symfony [info] {sfWebDebugLogger} Factories 56.76 ms (1)
+Sep 17 15:27:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:27:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:27:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:27:45 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:27:45 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:27:45 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:27:45 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:27:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:27:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:27:45 symfony [info] {sfWebDebugLogger} Configuration 10.89 ms (9)
+Sep 17 15:27:45 symfony [info] {sfWebDebugLogger} Factories 38.23 ms (1)
+Sep 17 15:27:45 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.10 ms (1)
+Sep 17 15:27:45 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 21.24 ms (1)
+Sep 17 15:27:45 symfony [info] {sfWebResponse} Send content (33220 o)
+Sep 17 15:27:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/css/menu.css with parameters array (  'module' => 'menu',  'action' => 'css',  'menu.css' => true,)
+Sep 17 15:27:46 symfony [info] {sfFrontWebController} Action "menu/css" does not exist
+Sep 17 15:27:46 symfony [err] {sfError404Exception} Action "menu/css" does not exist.
+Sep 17 15:27:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Sep 17 15:27:46 symfony [warning] {sfWebDebugLogger}  Warning at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\development\sfprojects\medicalagenda\lib\vendor\symfony\lib\response\sfWebResponse.class.php:409))
+Sep 17 15:27:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:27:46 symfony [info] {sfWebDebugLogger} Configuration 7.82 ms (5)
+Sep 17 15:27:46 symfony [info] {sfWebDebugLogger} Factories 47.69 ms (1)
+Sep 17 15:28:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:28:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:28:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:28:05 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:28:05 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:28:05 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:28:05 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:28:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:28:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:28:05 symfony [info] {sfWebDebugLogger} Configuration 10.98 ms (9)
+Sep 17 15:28:05 symfony [info] {sfWebDebugLogger} Factories 39.27 ms (1)
+Sep 17 15:28:05 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.10 ms (1)
+Sep 17 15:28:05 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 22.73 ms (1)
+Sep 17 15:28:05 symfony [info] {sfWebResponse} Send content (33220 o)
+Sep 17 15:28:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:28:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:28:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:28:50 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:28:50 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:28:50 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:28:50 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:28:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:28:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:28:50 symfony [info] {sfWebDebugLogger} Configuration 11.27 ms (9)
+Sep 17 15:28:50 symfony [info] {sfWebDebugLogger} Factories 44.42 ms (1)
+Sep 17 15:28:50 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.10 ms (1)
+Sep 17 15:28:50 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 26.89 ms (1)
+Sep 17 15:28:50 symfony [info] {sfWebResponse} Send content (33221 o)
+Sep 17 15:29:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:29:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:29:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:29:11 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:29:11 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:29:11 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:29:11 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:29:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:29:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:29:11 symfony [info] {sfWebDebugLogger} Configuration 15.53 ms (9)
+Sep 17 15:29:11 symfony [info] {sfWebDebugLogger} Factories 45.45 ms (1)
+Sep 17 15:29:11 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.33 ms (1)
+Sep 17 15:29:11 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 30.13 ms (1)
+Sep 17 15:29:11 symfony [info] {sfWebResponse} Send content (33220 o)
+Sep 17 15:29:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:29:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:29:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:29:17 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:29:17 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:29:17 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:29:17 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:29:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:29:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:29:17 symfony [info] {sfWebDebugLogger} Configuration 11.84 ms (9)
+Sep 17 15:29:17 symfony [info] {sfWebDebugLogger} Factories 39.70 ms (1)
+Sep 17 15:29:17 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.10 ms (1)
+Sep 17 15:29:17 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 27.65 ms (1)
+Sep 17 15:29:17 symfony [info] {sfWebResponse} Send content (33220 o)
+Sep 17 15:31:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:31:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:31:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:31:50 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:31:50 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:31:50 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:31:50 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:31:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:31:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:31:50 symfony [info] {sfWebDebugLogger} Configuration 11.34 ms (9)
+Sep 17 15:31:50 symfony [info] {sfWebDebugLogger} Factories 42.04 ms (1)
+Sep 17 15:31:50 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.09 ms (1)
+Sep 17 15:31:50 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 22.06 ms (1)
+Sep 17 15:31:50 symfony [info] {sfWebResponse} Send content (33221 o)
+Sep 17 15:32:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:32:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:32:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:32:05 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:32:05 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:32:05 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:32:05 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:32:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:32:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:32:05 symfony [info] {sfWebDebugLogger} Configuration 11.40 ms (9)
+Sep 17 15:32:05 symfony [info] {sfWebDebugLogger} Factories 40.20 ms (1)
+Sep 17 15:32:05 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.17 ms (1)
+Sep 17 15:32:05 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 23.77 ms (1)
+Sep 17 15:32:05 symfony [info] {sfWebResponse} Send content (33221 o)
+Sep 17 15:32:18 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /menu/index with parameters array (  'module' => 'menu',  'action' => 'index',)
+Sep 17 15:32:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Sep 17 15:32:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Sep 17 15:32:19 symfony [info] {menuActions} Call "menuActions->executeIndex()"
+Sep 17 15:32:19 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\modules/menu/templates/indexSuccess.php"
+Sep 17 15:32:19 symfony [info] {sfPHPView} Decorate content with "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:32:19 symfony [info] {sfPHPView} Render "C:\development\sfprojects\medicalagenda\apps\frontend\templates/layout.php"
+Sep 17 15:32:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Sep 17 15:32:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Sep 17 15:32:19 symfony [info] {sfWebDebugLogger} Configuration 12.92 ms (9)
+Sep 17 15:32:19 symfony [info] {sfWebDebugLogger} Factories 49.13 ms (1)
+Sep 17 15:32:19 symfony [info] {sfWebDebugLogger} Action "menu/index" 0.10 ms (1)
+Sep 17 15:32:19 symfony [info] {sfWebDebugLogger} View "Success" for "menu/index" 25.17 ms (1)
+Sep 17 15:32:19 symfony [info] {sfWebResponse} Send content (33220 o)

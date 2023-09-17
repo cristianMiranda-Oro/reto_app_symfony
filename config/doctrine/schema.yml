@@ -1,0 +1,78 @@
+User:
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    username: string(255)
+    password: string(255)
+    nombre: string(255)
+    apellido: string(255)
+    cedula: string(255)
+    role: string(255)
+  indexes:
+    unique_name:
+      fields: [cedula]
+
+Doctor:
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    tarjeta: string(255)
+    especialidad: string(255)
+    user_id:
+      type: integer
+  indexes:
+    unique_name:
+      fields: [tarjeta]
+  relations:
+    User:
+      class: User
+      local: user_id
+      foreign: id
+      onDelete: CASCADE
+
+
+Paciente:
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    numhistoria: string(255)
+    user_id:
+      type: integer
+  relations:
+    User:
+      class: User
+      local: user_id
+      foreign: id
+      onDelete: CASCADE
+
+
+CitaMedica:
+  tableName: cita_medica
+  columns:
+    id:
+      type: integer
+      primary: true
+      autoincrement: true
+    paciente_id:
+      type: integer
+    doctor_id:
+      type: integer
+    fecha:
+      type: date
+  relations:
+    Paciente:
+      class: Paciente
+      local: paciente_id
+      foreign: id
+      onDelete: CASCADE
+    Medico:
+      class: Doctor
+      local: doctor_id
+      foreign: id
+      onDelete: CASCADE
